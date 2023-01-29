@@ -37,13 +37,13 @@ const Home = ({ navigation }) => {
           <Text style={{ fontSize: 26, fontFamily: "RobotoMedium" }}>
             Hello Mugiwara
           </Text>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            <ImageBackground
-              source={require("../assets/img/Luffy.jpeg")}
-              style={{ width: 35, height: 35 }}
-              imageStyle={{ borderRadius: 25 }}
-            />
-          </TouchableOpacity>
+          {/* <TouchableOpacity onPress={() => navigation.goBack()}> */}
+          <ImageBackground
+            source={require("../assets/img/Luffy.jpeg")}
+            style={{ width: 35, height: 35 }}
+            imageStyle={{ borderRadius: 25 }}
+          />
+          {/* </TouchableOpacity> */}
         </View>
         <View
           style={{
