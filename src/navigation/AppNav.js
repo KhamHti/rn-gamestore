@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { View, Text, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 
 import AppStack from "./AppStack";
@@ -21,15 +21,6 @@ const AppNav = () => {
     <NavigationContainer>
       {userToken !== null ? <AuthStack /> : <AppStack />}
     </NavigationContainer>
-
-    // <NavigationContainer>
-    //   {/* <AppStack /> */}
-    //   <AuthStack />
-    // </NavigationContainer>
-
-    // <NavigationContainer>
-    //   {userToken !== null ? <AppStack /> : <AuthStack />}
-    // </NavigationContainer>
   );
 };
 

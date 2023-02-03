@@ -7,7 +7,6 @@ import {
 import Ionicons from "react-native-vector-icons/Ionicons";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { useNavigation } from "@react-navigation/native";
 import { AuthContext } from "../context/AuthContext";
 
 const CustomDrawer = (props) => {

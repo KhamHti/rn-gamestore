@@ -38,7 +38,6 @@ const OnBoardingScreen = ({ navigation }) => {
           GAMEONE
         </Text>
       </View>
-      {/* <Image source={require("./assets/img/ps5.png")} /> */}
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <GamingImg
           width={300}
@@ -47,7 +46,6 @@ const OnBoardingScreen = ({ navigation }) => {
         />
       </View>
       <TouchableOpacity
-        // onPress={() => navigation.navigate("DNavigation")}
         onPress={() => navigation.navigate("Login")}
         style={{
           flexDirection: "row",

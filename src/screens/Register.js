@@ -24,25 +24,6 @@ const Register = ({ navigation }) => {
   const [open, setOpen] = useState(false);
   const [dobLabel, setDobLabel] = useState("Date of Birth :");
 
-  // const ggwp = (
-  //   <DatePicker
-  //     modal
-  //     open={open}
-  //     date={date}
-  //     mode={date}
-  //     maximumDate={new Date("2006-01-01")}
-  //     manimumDate={new Date("1980-01-01")}
-  //     onConfirm={(data) => {
-  //       setOpen(false);
-  //       setDate(date);
-  //       setDobLabel(data.toDatString());
-  //     }}
-  //     onCancel={() => {
-  //       setOpen(false);
-  //     }}
-  //   />
-  // );
-
   return (
     <SafeAreaView style={{ flex: 1, justifyContent: "center" }}>
       <ScrollView
