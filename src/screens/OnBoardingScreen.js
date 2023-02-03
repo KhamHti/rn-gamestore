@@ -47,7 +47,8 @@ const OnBoardingScreen = ({ navigation }) => {
         />
       </View>
       <TouchableOpacity
-        onPress={() => navigation.navigate("LoginScreen")}
+        // onPress={() => navigation.navigate("DNavigation")}
+        onPress={() => navigation.navigate("Login")}
         style={{
           flexDirection: "row",
           backgroundColor: "#ad40af",

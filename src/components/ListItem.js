@@ -3,7 +3,7 @@ import { Image, View, Text } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { windowWidth } from "../utilities/Dimensions";
 
-const ListItem = ({ photo, isFree, title, subtitile, price }) => {
+const ListItem = ({ photo, isFree, title, subtitile, price, onPress }) => {
   return (
     <View
       style={{
@@ -39,6 +39,7 @@ const ListItem = ({ photo, isFree, title, subtitile, price }) => {
         </View>
       </View>
       <TouchableOpacity
+        onPress={onPress}
         style={{
           padding: 10,
           width: 100,

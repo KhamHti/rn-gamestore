@@ -1,16 +1,33 @@
 import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import OnBoardingScreen from "../screens/OnBoardingScreen";
 import LoginScreen from "../screens/LoginScreen";
+import Home from "../screens/Home";
+import DNavigation from "./DNavigation";
+import GameDetails from "../screens/GameDetails";
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const AuthStack = () => {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="OnBoardingScreen" component={OnBoardingScreen} />
-      <Stack.Screen name="LoginScreen" component={LoginScreen} />
+    <Stack.Navigator>
+      {/* <Stack.Screen
+        name="OnBoardingScreen"
+        component={OnBoardingScreen}
+        options={{ headerShown: false }}
+      /> */}
+      <Stack.Screen
+        name="DNavigation"
+        component={DNavigation}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="GameDetails"
+        component={GameDetails}
+        options={({ route }) => ({
+          title: route.params?.title,
+        })}
+      />
     </Stack.Navigator>
   );
 };

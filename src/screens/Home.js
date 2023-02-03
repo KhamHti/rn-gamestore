@@ -34,16 +34,23 @@ const Home = ({ navigation }) => {
             paddingTop: 10,
           }}
         >
-          <Text style={{ fontSize: 26, fontFamily: "RobotoMedium" }}>
-            Hello Mugiwara
-          </Text>
-          {/* <TouchableOpacity onPress={() => navigation.goBack()}> */}
-          <ImageBackground
-            source={require("../assets/img/Luffy.jpeg")}
-            style={{ width: 35, height: 35 }}
-            imageStyle={{ borderRadius: 25 }}
-          />
-          {/* </TouchableOpacity> */}
+          <TouchableOpacity onPress={() => navigation.openDrawer()}>
+            <Text
+              style={{
+                fontSize: 26,
+                fontFamily: "RobotoMedium",
+              }}
+            >
+              Hello Mugiwara
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.openDrawer()}>
+            <ImageBackground
+              source={require("../assets/img/Luffy.jpeg")}
+              style={{ width: 35, height: 35 }}
+              imageStyle={{ borderRadius: 25 }}
+            />
+          </TouchableOpacity>
         </View>
         <View
           style={{
@@ -70,10 +77,15 @@ const Home = ({ navigation }) => {
             marginVertical: 15,
           }}
         >
-          <Text style={{ fontSize: 18, fontFamily: "RobotoMedium" }}>
+          <Text
+            style={{
+              fontSize: 18,
+              fontFamily: "RobotoMedium",
+            }}
+          >
             Upcoming Games
           </Text>
-          <TouchableOpacity onPress={() => {}}>
+          <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
             <Text style={{ color: "#0aada8" }}>See all</Text>
           </TouchableOpacity>
         </View>
@@ -82,7 +94,7 @@ const Home = ({ navigation }) => {
           renderItem={({ item }) => <BannerSlider data={item} />}
           keyExtractor={(item) => item.id}
           horizontal
-          showsHorizontalScrollIndicator={false}
+          showsHorizontalScrollIndicator={true}
           sliderWidth={windowWidth - 40}
           itemWidth={300}
         />
@@ -106,6 +118,15 @@ const Home = ({ navigation }) => {
               subtitile={item.subtitle}
               isFree={item.isFree}
               price={item.price}
+              onPress={() =>
+                navigation.navigate("GameDetails", {
+                  id: item.id,
+                  title: item.title,
+                  photo: item.poster,
+                  subtitile: item.subtitle,
+                  price: item.price,
+                })
+              }
             />
           ))}
         {gameTab == 2 &&
@@ -117,6 +138,12 @@ const Home = ({ navigation }) => {
               subtitile={item.subtitle}
               isFree={item.isFree}
               price={item.price}
+              onPress={() =>
+                navigation.navigate("GameDetails", {
+                  title: item.title,
+                  id: item.id,
+                })
+              }
             />
           ))}
 

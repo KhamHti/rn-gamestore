@@ -1,16 +1,17 @@
 import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
 
-import Home from "../screens/Home";
+import { createStackNavigator } from "@react-navigation/stack";
+import OnBoardingScreen from "../screens/OnBoardingScreen";
+import LoginScreen from "../screens/LoginScreen";
+import Register from "../screens/Register";
 
 const Stack = createStackNavigator();
-
-const AppStack = () => {
+export default function AppStack() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="OnBoardingScreen" component={OnBoardingScreen} />
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Register" component={Register} />
     </Stack.Navigator>
   );
-};
-
-export default AppStack;
+}

@@ -6,7 +6,7 @@ export default function BannerSlider({ data }) {
     <View>
       <Image
         source={data.image}
-        style={{ height: 180, width: 350, borderRadius: 10 }}
+        style={{ height: 160, width: 350, borderRadius: 10 }}
       />
     </View>
   );
