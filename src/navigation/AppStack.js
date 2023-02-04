@@ -1,6 +1,6 @@
 import React from "react";
-
 import { createStackNavigator } from "@react-navigation/stack";
+
 import OnBoardingScreen from "../screens/OnBoardingScreen";
 import LoginScreen from "../screens/LoginScreen";
 import Register from "../screens/Register";

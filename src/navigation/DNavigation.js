@@ -15,7 +15,6 @@ const DNavigation = () => {
   return (
     <Drawer.Navigator
       drawerContent={(props) => <CustomDrawer {...props} />}
-      //   screenOptions={{ headerShown: false }}
       screenOptions={{
         drawerLabelStyle: {
           marginLeft: -20,
@@ -28,7 +27,7 @@ const DNavigation = () => {
       }}
     >
       <Drawer.Screen
-        name="TabNavigator"
+        name="Home"
         component={TabNavigator}
         options={{
           drawerIcon: ({ color }) => (

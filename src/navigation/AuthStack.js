@@ -1,8 +1,5 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import OnBoardingScreen from "../screens/OnBoardingScreen";
-import LoginScreen from "../screens/LoginScreen";
-import Home from "../screens/Home";
 import DNavigation from "./DNavigation";
 import GameDetails from "../screens/GameDetails";
 
@@ -11,11 +8,6 @@ const Stack = createNativeStackNavigator();
 const AuthStack = () => {
   return (
     <Stack.Navigator>
-      {/* <Stack.Screen
-        name="OnBoardingScreen"
-        component={OnBoardingScreen}
-        options={{ headerShown: false }}
-      /> */}
       <Stack.Screen
         name="DNavigation"
         component={DNavigation}

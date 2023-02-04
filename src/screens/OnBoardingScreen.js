@@ -1,22 +1,10 @@
 import { View, Text, SafeAreaView, TouchableOpacity } from "react-native";
 import React from "react";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import { useFonts } from "expo-font";
+
 import GamingImg from "../assets/svg/gaming.svg";
 
 const OnBoardingScreen = ({ navigation }) => {
-  const [loaded] = useFonts({
-    InterBold: require("../assets/fonts/Inter-Bold.ttf"),
-    RobotoBold: require("../assets/fonts/Roboto-Bold.ttf"),
-    RobotoBoldItalic: require("../assets/fonts/Roboto-BoldItalic.ttf"),
-    RobotoItalic: require("../assets/fonts/Roboto-Italic.ttf"),
-    RobotoMedium: require("../assets/fonts/Roboto-Medium.ttf"),
-    RobotoMediumItalic: require("../assets/fonts/Roboto-MediumItalic.ttf"),
-    RobotoRegular: require("../assets/fonts/Roboto-Regular.ttf"),
-  });
-
-  if (!loaded) return null;
-
   return (
     <SafeAreaView
       style={{
